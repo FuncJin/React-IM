@@ -1,0 +1,48 @@
+.im-intro-share-page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: im-move-to-top-2rem-bounce 0.4s ease-in;
+
+    .im-i-s-p-qr-code {
+        width: 80%;
+        padding: 30px 15px;
+        margin: 0 auto;
+        background-color: var(--im-color-bg-14);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        box-sizing: border-box;
+        transition: all 0.3s;
+
+        &:hover {
+            box-shadow: 0 0 10px 0px #0000001c;
+        }
+
+        .im-i-s-p-qr-code-body {
+            text-align: center;
+
+            .im-i-s-p-qr-code-b-nickname {
+                font-weight: 700;
+                font-size: 16px;
+                color: var(--im-color-font-2);
+            }
+
+            .im-i-s-p-qr-code-b-id {
+                color: var(--im-color-font-4);
+                margin-bottom: 20px;
+            }
+        }
+
+        img {
+            width: 72px;
+            height: 72px;
+            margin-bottom: 10px;
+        }
+    }
+}

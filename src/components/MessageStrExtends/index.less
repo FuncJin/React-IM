@@ -1,0 +1,41 @@
+@import url('@style/commons/template.less');
+
+.im-message-str-extends {
+    width: 100%;
+    min-width: 310px;
+    height: 260px;
+    padding: 5px;
+
+    .im-m-s-e-style {
+        height: 200px;
+        border-radius: 10px;
+        overflow-y: auto;
+        .scrollY();
+        margin-bottom: 10px;
+    }
+
+    .im-m-s-e-list {
+        width: 90%;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+        margin: 0 auto;
+        color: var(--im-color-font-2);
+        background-color: var(--im-color-bg-14);
+
+        .im-m-s-e-l-highed {
+            color: var(--im-color-primary-1);
+            background-color: var(--im-color-bg-7);
+        }
+
+        li {
+            padding: 5px 10px;
+            border-radius: 7px;
+            margin: 0 10px;
+            font-size: 12px;
+            transition: all 0.2s;
+            cursor: default;
+        }
+    }
+}

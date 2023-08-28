@@ -1,0 +1,43 @@
+@import url('@style/commons/template.less');
+
+// 联系人面板的分组标题
+.im-p-c-classify {
+    font-size: 16px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--im-color-font-2);
+
+    .im-p-c-c-highed {
+        border-bottom: 1px solid var(--im-color-primary-3);
+        color: var(--im-color-primary-3);
+    }
+
+    li {
+        margin: 0 1rem;
+        cursor: pointer;
+    }
+}
+// 联系人面板下的每一个区块(好友列表、群聊列表、...)
+.im-p-c-classify-section {
+    height: 100%;
+    overflow-y: auto;
+    .scrollY();
+    padding-bottom: 90px !important;
+    animation: im-move-to-top-2rem-bounce 0.5s;
+
+    .im-p-c-classify-section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--im-color-font-2);
+
+        .im-p-c-classify-section-h-comment {
+            margin-right: 1rem;
+            font-size: 12px;
+            font-weight: 400;
+            color: var(--im-color-font-9);
+        }
+    }
+}

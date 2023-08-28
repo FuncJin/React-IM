@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["src/*"],
+            "@api/*": ["src/api/*"],
+            "@components/*": ["src/components/*"],
+            "@constant": ["src/constant/index"],
+            "@errors": ["src/errors/index"],
+            "@hooks": ["src/hooks/index"],
+            "@interface/*": ["src/interface/*"],
+            "@pages/*": ["src/pages/*"],
+            "@router/*": ["src/router/*"],
+            "@style/*": ["src/style/*"],
+            "@utils/*": ["src/utils/*"]
+        },
+        "target": "es2015",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "removeComments": true
+    },
+    "include": ["src"]
+}

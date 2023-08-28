@@ -1,0 +1,128 @@
+.im-panel-friends-circle {
+    .im-p-fc-single {
+        padding: 13px 20px;
+        margin-bottom: 20px;
+        border-radius: 13px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        background-color: var(--im-color-bg-1);
+
+        .im-p-fc-s-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+
+            .im-p-fc-s-h-avatar {
+                width: 46px;
+                height: 46px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 10px;
+            }
+
+            .im-p-fc-s-nickname {
+                font-size: 14px;
+            }
+        }
+
+        .im-p-fc-s-text {
+            font-size: 14px;
+            margin-bottom: 10px;
+            word-break: break-all;
+            color: var(--im-color-font-2);
+        }
+
+        .im-p-fc-s-img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 8px;
+            object-fit: contain;
+            object-position: top left;
+        }
+
+        .im-p-fc-s-details {
+            padding-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .im-p-fc-s-d-icon {
+                font-size: 18px;
+                color: var(--im-color-font-2);
+            }
+
+            .im-p-fc-s-d-i-liked {
+                margin-right: 15px;
+                cursor: pointer;
+            }
+
+            .im-p-fc-s-d-i-primary {
+                color: var(--im-color-primary-3);
+            }
+        }
+
+        .im-p-fc-s-persons {
+            font-size: 12px;
+            margin-bottom: 5px;
+            color: var(--im-color-font-2);
+
+            a {
+                color: var(--im-color-font-2);
+            }
+        }
+
+        .im-p-fc-s-comment {
+            font-size: 12px;
+            padding: 5px;
+            border-radius: 5px;
+            color: var(--im-color-font-2);
+            background-color: var(--im-color-bg-8);
+
+            li {
+                padding: 5px;
+                border-radius: 7px;
+
+                &:hover {
+                    background-color: var(--im-color-bg-6);
+                }
+            }
+        }
+
+        .im-p-fc-s-comment-text {
+            display: flex;
+            margin-top: 10px;
+            animation: im-move-to-bottom-2rem-bounce 0.35s;
+            button {
+                border-radius: 7px;
+                border: 1px solid var(--im-color-primary-3);
+                color: var(--im-color-primary-3);
+                &:hover {
+                    color: var(--im-color-bg-1);
+                    background-color: var(--im-color-primary-3);
+                }
+            }
+        }
+
+        .im-p-fc-s-nickname {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--im-color-font-2);
+        }
+
+        .im-p-fc-s-text-comment {
+            font-size: 12px;
+            color: var(--im-color-font-3);
+        }
+    }
+}
+
+.im-panel-friends-circle-empty {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

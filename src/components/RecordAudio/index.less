@@ -1,0 +1,51 @@
+.im-record-audio {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .im-r-a-body {
+        height: 70px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        span {
+            color: var(--im-color-font-2);
+        }
+
+        .im-r-a-b-img {
+            width: 80px;
+            height: 70px;
+            font-size: 70px;
+            display: inline-block;
+            transition: transform 0.2s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .im-r-a-tip {
+        font-size: 14px;
+        text-align: center;
+        color: var(--im-color-font-3);
+        animation: im-sacle-opacity-bounce 0.3s;
+
+        .im-r-a-t-dur {
+            color: var(--im-color-font-4);
+        }
+
+        .im-r-a-t-action {
+            margin: 0 3px;
+            text-decoration-line: underline;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--im-color-primary-1);
+        }
+    }
+}

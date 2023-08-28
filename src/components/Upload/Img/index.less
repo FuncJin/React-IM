@@ -1,0 +1,52 @@
+.im-panel-upload {
+    width: 100%;
+    height: 100%;
+    min-width: 80px;
+    min-height: 80px;
+    position: relative;
+    z-index: 1;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    .im-p-u-default-img {
+        font-size: 80px;
+        color: var(--im-color-font-2);
+    }
+}
+
+.im-panel-upload-bg {
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.im-p-u-loading-bounce {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loading-img-bounce 0.5s;
+    background-color: #ffffffc2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--im-color-font-2);
+}
+
+@keyframes loading-img-bounce {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

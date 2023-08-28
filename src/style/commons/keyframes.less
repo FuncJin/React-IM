@@ -1,0 +1,49 @@
+// 从下往上，带有透明度变化（上为最终位置）
+@keyframes im-move-to-top-2rem-bounce {
+    0% {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// 从上往下，带有透明度变化（下为最终位置）
+@keyframes im-move-to-bottom-2rem-bounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// 仅有透明度变化
+@keyframes im-opacity-bounce {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+// 从小到大，带有透明度变化
+@keyframes im-sacle-opacity-bounce {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

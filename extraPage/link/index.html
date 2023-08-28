@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./favicon.ico" />
+        <link rel="stylesheet" href="./index.css" />
+        <title>跳转提示-React IM</title>
+        <script>
+            const reg = /^https:\/\/im\.funcjin\.cn.*/
+            const target = new URL(window.location.href).searchParams.get('target')
+            if (reg.test(target)) window.open(target, '_self')
+        </script>
+    </head>
+    <body>
+        <div class="tip">
+            <div class="title">
+                <img src="./favicon.ico" />
+                <span>跳转提示</span>
+            </div>
+            <div>
+                <p class="alert">即将离开React IM，请注意账号财产安全</p>
+                <p class="href"></p>
+            </div>
+            <a>继续访问</a>
+        </div>
+        <script>
+            document.querySelector('.href').innerText = target
+            document.querySelector('a').href = target
+        </script>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+# node_modules
+/node_modules/
+
+# webpack
+/config/
+/scripts/
+
+# craco
+/craco.config.js
+
+# build
+/build/

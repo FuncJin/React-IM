@@ -1,0 +1,37 @@
+@import url('@style/commons/template.less');
+
+.im-panel-versions {
+    padding: 1rem;
+    overflow-y: auto;
+    .scrollY();
+
+    .im-p-v-cur {
+        border-radius: 1rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        color: var(--im-color-font-2);
+        background-color: var(--im-color-bg-14);
+
+        &:nth-last-child(1) {
+            border-bottom: none;
+        }
+
+        .im-p-v-c-title {
+            overflow: hidden;
+            margin-bottom: 10px;
+
+            .im-p-v-c-t-num {
+                font-weight: 700;
+                float: left;
+            }
+            .im-p-v-c-t-num-cur {
+                color: var(--im-color-primary-1);
+            }
+
+            .im-p-v-c-t-time {
+                color: var(--im-color-font-9);
+                float: right;
+            }
+        }
+    }
+}

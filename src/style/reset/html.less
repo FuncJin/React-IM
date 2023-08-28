@@ -1,0 +1,47 @@
+@import url('@style/commons/template.less');
+
+img {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+input,
+select,
+textarea {
+    outline: none;
+    border: none;
+    color: var(--im-color-font-11) !important;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+}
+
+a {
+    color: var(--im-color-font-2);
+
+    &:hover {
+        color: var(--im-color-font-1);
+    }
+}
+
+textarea {
+    .scrollY();
+}
+
+.im-img-avatar-radius {
+    border-radius: 50%;
+}

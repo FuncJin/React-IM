@@ -1,0 +1,127 @@
+.im-dialog-drawer {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .im-d-d-options {
+        width: 100%;
+        margin-bottom: 13px;
+        user-select: none;
+        animation: im-dialog-drawer-body-bounce-s 0.3s forwards;
+
+        .im-d-d-o-list {
+            border-radius: 16px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            background-color: var(--im-color-bg-4);
+
+            .im-d-d-o-list-title {
+                font-size: 12px;
+                color: var(--im-color-font-5);
+            }
+
+            .im-d-d-o-list-text-red {
+                color: var(--im-color-danger-1);
+            }
+
+            .im-d-d-o-list-text-blue {
+                color: var(--im-color-sub1-2);
+            }
+
+            p {
+                text-align: center;
+                padding: 13px;
+                font-size: 18px;
+                letter-spacing: 1px;
+                &:not(:last-child) {
+                    border-bottom: 1px solid var(--im-color-bg-5);
+                }
+            }
+        }
+
+        .im-d-d-o-back {
+            font-size: 18px;
+            color: var(--im-color-sub1-2);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-align: center;
+            padding: 13px;
+            border-radius: 16px;
+            overflow: hidden;
+            background-color: var(--im-color-bg-1);
+        }
+
+        .im-d-d-o-text {
+            cursor: pointer;
+            &:hover {
+                background-color: var(--im-color-bg-6);
+            }
+        }
+    }
+}
+
+.im-dialog-drawer-bg {
+    background-color: rgba(102, 102, 102, 0.45);
+    animation: im-dialog-drawer-bounce-s 0.3s forwards;
+}
+
+.im-dialog-drawer-bounce-h {
+    animation: im-dialog-drawer-bounce-h 0.3s forwards;
+}
+
+.im-dialog-drawer-body-bounce-h {
+    animation: im-dialog-drawer-body-bounce-h 0.3s forwards !important;
+}
+
+// 背景
+@keyframes im-dialog-drawer-bounce-s {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes im-dialog-drawer-bounce-h {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+// 盒子
+@keyframes im-dialog-drawer-body-bounce-s {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes im-dialog-drawer-body-bounce-h {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+}

@@ -1,0 +1,243 @@
+@import url('@style/commons/template.less');
+
+// 聊天页面
+.im-message-room {
+    height: 100%;
+
+    .im-m-r-header {
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--im-color-bg-opacity-10);
+        backdrop-filter: blur(10px);
+
+        .im-m-r-header-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--im-color-font-2);
+        }
+
+        .im-m-r-header-description {
+            font-size: 12px;
+            color: var(--im-color-font-3);
+        }
+    }
+
+    .im-m-r-content {
+        height: 100%;
+        padding: 70px 10px;
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: auto;
+        .scrollY();
+
+        ul {
+            li {
+                .im-m-r-c-tip {
+                    padding-top: 5px;
+                    margin-bottom: 15px;
+                    text-align: center;
+                    font-size: 12px;
+                    color: var(--im-color-font-9);
+                }
+
+                .im-m-r-c-msg {
+                    margin-bottom: 15px;
+                    display: flex;
+                    align-items: center;
+
+                    a {
+                        align-self: start;
+                    }
+
+                    .im-m-r-c-m-avatar {
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                    }
+
+                    .im-m-r-c-m-row {
+                        width: 100%;
+                        padding: 0 3px;
+
+                        .im-m-r-c-m-r-content {
+                            font-size: 14px;
+                            width: fit-content;
+                            max-width: 80%;
+                            padding: 7px 10px;
+                            border-radius: 8px;
+                            word-break: break-all;
+                            white-space: pre-wrap;
+
+                            img {
+                                width: auto !important;
+                                max-width: 100%;
+                                max-height: 230px;
+                                border-radius: 8px;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .im-m-r-c-m-r-c-title {
+                            font-size: 12px;
+                            transform: scale(0.9);
+
+                            .im-m-r-c-m-r-c-t-name {
+                                color: var(--im-color-font-3);
+                            }
+                        }
+
+                        .im-m-r-c-m-r-c-title-self {
+                            text-align: end;
+                            margin-right: -10px;
+                        }
+
+                        .im-m-r-c-m-r-c-title-other {
+                            margin-left: -13px;
+                            margin-bottom: 2px;
+                        }
+                    }
+                }
+
+                .im-m-r-c-msg-self {
+                    flex-direction: row-reverse;
+                    animation: im-room-self-bounce 0.5s;
+
+                    .im-m-r-c-m-r-content {
+                        margin-right: 5px;
+                        margin-left: auto;
+                        color: var(--im-color-font-12);
+                        background-color: var(--im-color-primary-3);
+                    }
+                }
+
+                .im-m-r-c-msg-other {
+                    animation: im-room-other-bounce 0.5s;
+
+                    .im-m-r-c-m-r-content {
+                        margin-left: 5px;
+                        color: var(--im-color-bg-10);
+                        background-color: var(--im-color-bg-4);
+                    }
+                }
+
+                .im-m-r-c-m-r-content-img {
+                    padding: 7px 0 !important;
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+
+    .im-m-r-send {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--im-color-bg-opacity-10);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+
+        .im-m-r-send-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+        }
+
+        .im-m-r-s-textarea {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 10px;
+
+            textarea {
+                margin-right: 10px;
+                border-radius: 5px;
+                background-color: var(--im-color-bg-13);
+            }
+
+            .im-m-r-s-t-no-icons {
+                width: 78px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                span {
+                    width: 22px;
+                    height: 22px;
+                    font-size: 22px;
+                    color: var(--im-color-font-2);
+                }
+            }
+        }
+
+        .im-m-r-s-no-allow {
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--im-color-primary-1);
+            cursor: not-allowed;
+        }
+    }
+
+    .im-m-r-send-boder-top {
+        border-top: 1px solid var(--im-color-bg-6);
+    }
+}
+
+.im-m-r-c-msg-feature {
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .im-m-r-c-m-f-title {
+        font-size: 12px;
+        color: var(--im-color-font-9);
+    }
+}
+
+.im-m-r-c-msg-feature-body {
+    display: block;
+    font-size: 12px;
+    cursor: default;
+
+    div {
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: all 0.3s;
+    }
+
+    &:hover {
+        div {
+            background-color: var(--im-color-bg-7) !important;
+        }
+    }
+}
+
+@keyframes im-room-other-bounce {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes im-room-self-bounce {
+    0% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

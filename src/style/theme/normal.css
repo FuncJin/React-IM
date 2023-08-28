@@ -1,0 +1,58 @@
+/** 默认主题 */
+:root {
+    /** 背景等颜色 */
+    --im-color-bg-1: #ffffff;
+    --im-color-bg-2: #eeeeee;
+    --im-color-bg-3: #f1f1f6;
+    --im-color-bg-4: #e3e3e3;
+    --im-color-bg-5: #d5d5d5;
+    --im-color-bg-6: #f1f1f1;
+    --im-color-bg-7: #f0f0f0;
+    --im-color-bg-8: #f9f9f9;
+    --im-color-bg-9: #fbfbfb;
+    --im-color-bg-10: #000000;
+    --im-color-bg-11: #f5f5f5;
+    --im-color-bg-12: #fbfbfb;
+    --im-color-bg-13: #f1f1f6;
+    --im-color-bg-14: #ffffff;
+    --im-color-bg-15: #f9f9f9;
+    --im-color-bg-16: #f1f1f1;
+    --im-color-bg-17: #d9d9d9;
+
+    --im-color-bg-opacity-10: rgba(255, 255, 255, 0.8);
+    --im-color-bg-opacity-11: rgba(255, 255, 255, 0.5);
+
+    /**  文字等颜色 */
+    --im-color-font-1: #000000;
+    --im-color-font-2: #333333;
+    --im-color-font-3: #666666;
+    --im-color-font-4: #8a8a8d;
+    --im-color-font-5: #858585;
+    --im-color-font-6: #8e8e92;
+    --im-color-font-7: #e5e5e9;
+    --im-color-font-8: #f1f1f2;
+    --im-color-font-9: #999999;
+    --im-color-font-10: #000000;
+    --im-color-font-11: #000000;
+    --im-color-font-12: #ffffff;
+    --im-color-font-13: #ffffff;
+
+    /** 主色 */
+    --im-color-primary-1: #af0069;
+    --im-color-primary-2: #b8006e;
+    --im-color-primary-3: #af0069;
+
+    /** 副色1 */
+    --im-color-sub1-1: #09015f;
+    --im-color-sub1-2: #3478f6;
+    /** 副色2 */
+    --im-color-sub2-1: #f6c065;
+    /** 副色3 */
+    --im-color-sub3-2: #55b3b1;
+
+    /** 除了主色与副色之外的调配色 */
+    --im-color-match1-1: #dfd9cd;
+
+    /** 危险色 */
+    --im-color-danger-1: #ff4021;
+}

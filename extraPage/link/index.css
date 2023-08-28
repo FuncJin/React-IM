@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f5f5;
+}
+
+.tip {
+    width: 85%;
+    max-width: 600px;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #e5e6eb;
+    background-color: #ffffff;
+}
+
+.tip .title {
+    height: 50px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.tip .title img {
+    margin-right: 15px;
+}
+
+.tip .alert {
+    font-size: 18px;
+}
+.tip .href {
+    padding: 16px 0 24px;
+    font-size: 14px;
+    word-break: break-all;
+    color: #808080;
+    border-bottom: 1px solid #e5e6eb;
+}
+
+.tip a {
+    float: right;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 35px;
+    padding: 7px 15px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-align: center;
+    text-decoration-line: none;
+    color: #ffffff;
+    background-color: #af0069;
+}
+
+.tip a:hover {
+    text-decoration-line: underline;
+}
+
+@media (max-width: 500px) {
+    .tip .alert {
+        font-size: 16px;
+    }
+    .tip .href {
+        font-size: 12px;
+        border-bottom: none;
+    }
+    .tip a {
+        width: 100%;
+        margin-top: 0;
+        padding: 12px 15px;
+    }
+}

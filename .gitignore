@@ -1,0 +1,18 @@
+# dependencies
+/node_modules
+
+# production
+/build
+
+# Http Api、Socket Api
+apiName.ts
+
+# env
+/src/constant/env/dev.ts
+/src/constant/env/prod.ts
+
+# encrypt
+/src/utils/account/encrypt/index.ts
+
+# docs
+/src/docs/_readme

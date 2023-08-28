@@ -1,0 +1,377 @@
+@import url('@style/commons/template.less');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--im-color-bg-1) none no-repeat center center;
+    background-size: cover;
+    box-shadow: 2px 5px 9px 1px #00000024;
+    transition: background-image 0.3s linear;
+}
+
+// 根标签
+#root {
+    width: 375px;
+    height: 667px;
+    border-radius: 13px;
+    overflow: hidden;
+    transition: all 0.18s;
+    box-shadow: 1px 2px 4px 2px #00000012;
+
+    #im {
+        width: 100%;
+        height: 100%;
+        background-color: var(--im-color-bg-1);
+        position: relative;
+
+        .im-panel {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+// 登录、注册
+.im-p-account {
+    width: 100%;
+    height: 100%;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .im-p-a-text {
+        opacity: 0;
+        user-select: none;
+        animation: im-move-to-bottom-2rem-bounce 0.5s forwards;
+
+        .im-p-a-t-1 {
+            font-size: 1.5rem;
+            color: var(--im-color-primary-1);
+        }
+
+        .im-p-a-t-2 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--im-color-primary-1);
+        }
+
+        .im-p-a-t-3 {
+            font-size: 12px;
+            color: var(--im-color-font-9);
+        }
+    }
+
+    .im-p-a-info {
+        padding-left: 3rem;
+
+        .im-p-a-i-avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 1.5rem;
+            margin-bottom: 2.5rem;
+            overflow: hidden;
+            opacity: 0;
+            animation: im-opacity-bounce 0.8s 0.2s forwards;
+
+            .im-p-a-i-a-register {
+                font-size: 64px;
+                color: var(--im-color-primary-1);
+            }
+        }
+
+        form {
+            opacity: 0;
+            animation: im-move-to-top-2rem-bounce 0.8s 0.2s forwards;
+
+            input {
+                margin-bottom: 2.5rem;
+                border-bottom: 1px solid var(--im-color-bg-2);
+            }
+
+            .im-p-a-i-id {
+                font-size: 18px;
+            }
+
+            .im-p-a-i-mail {
+                position: relative;
+
+                .im-p-a-i-m-send {
+                    font-size: 14px;
+                    position: absolute;
+                    top: -5px;
+                    right: 0;
+                    color: var(--im-color-font-3);
+                    background-color: var(--im-color-bg-1);
+
+                    &:hover {
+                        color: var(--im-color-primary-1);
+                    }
+                }
+            }
+        }
+    }
+
+    .im-p-a-footer {
+        width: 90%;
+        align-self: center;
+        padding-right: 2rem;
+        opacity: 0;
+        animation: im-move-to-top-2rem-bounce 0.5s 0.5s forwards;
+
+        .im-p-a-f-btn {
+            border-radius: 1.5rem;
+            letter-spacing: 0 !important;
+        }
+        .im-p-a-f-extends {
+            font-size: 12px;
+            color: var(--im-color-font-3);
+            .im-p-a-f-e-retrieve-pwd {
+                cursor: pointer;
+                color: var(--im-color-font-1);
+            }
+        }
+    }
+}
+
+// 主窗口部分(message、contacts、friendsCircle)
+.im-panel-section {
+    width: 100%;
+    height: calc(100% + 60px);
+    padding: 1rem;
+    position: absolute;
+    z-index: 9995;
+    opacity: 0;
+    background-color: var(--im-color-bg-1);
+
+    .im-p-s-loading {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.6rem;
+        color: var(--im-color-font-2);
+    }
+}
+
+.im-panel-section-cur-left {
+    z-index: 9996;
+    animation: im-panel-section-c-l-bounce 0.4s forwards;
+}
+
+.im-panel-section-cur-right {
+    z-index: 9996;
+    animation: im-panel-section-c-r-bounce 0.4s forwards;
+}
+
+// 滚动区域
+.im-panel-home-message {
+    height: calc(100% + 60px);
+    padding-bottom: 60px;
+    overflow-y: auto;
+    .scrollY();
+}
+.im-panel-home-friendsCircle {
+    padding: 0;
+
+    .im-panel-home-friendsCircle-list {
+        height: 100%;
+        padding-bottom: 60px;
+        overflow-y: auto;
+        .scrollYNone();
+        background-color: var(--im-color-bg-11);
+
+        .im-panel-friends-circle {
+            padding: 1rem;
+            padding-bottom: 0;
+        }
+    }
+}
+
+// 独立于主窗口的页面部分
+.im-panel-float-page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: im-sacle-opacity-bounce 0.2s;
+}
+
+// 背景图片
+.im-p-i-c-cover {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.im-p-i-c-shade {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(#0000004a, transparent);
+}
+.im-panel-intro-bg-img-radius {
+    margin-bottom: 10px;
+    position: relative;
+
+    div &:first-child {
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+}
+.im-panel-intro-container {
+    width: 100%;
+    height: 200px;
+    position: relative;
+
+    .im-p-i-c-liked {
+        padding: 5px 10px;
+        font-size: 20px;
+        user-select: none;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        z-index: 1;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        color: var(--im-color-font-2);
+        background-color: var(--im-color-bg-2);
+
+        span {
+            z-index: 1;
+            transition: all 0.3s;
+
+            &:hover {
+                color: var(--im-color-primary-1);
+                transform: scale(1.1);
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+    }
+}
+// 好友主页、群聊主页通用样式
+.im-panel-intro-basis-info {
+    width: 100%;
+    position: absolute;
+    top: 145px;
+    left: 0;
+    color: var(--im-color-font-2);
+
+    .im-p-i-b-i-header {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+
+        .im-p-i-b-i-h-avatar {
+            width: 84px;
+            height: 84px;
+            margin-right: 1rem;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .im-p-i-b-i-h-avatar-set {
+            z-index: 1;
+            transform: translateY(-50px);
+        }
+
+        .im-p-i-b-i-h-acc {
+            font-size: 16px;
+
+            .im-p-i-b-i-h-acc-id {
+                font-weight: 600;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+// 首屏欢迎动效
+#im-confetti {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    top: 0;
+    height: 0;
+    z-index: 9998;
+}
+
+// 文字中的url链接
+#im-decode-link-a {
+    margin: 0 3px;
+    color: inherit;
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+
+// 主页标签
+.im-home-page-tag {
+    border-radius: 4px !important;
+    margin-right: 10px !important;
+    color: #fff !important;
+}
+.im-home-page-tag-ff5c66 {
+    background-color: #ff5c66 !important;
+}
+.im-home-page-tag-622B7D {
+    background-color: #622b7d !important;
+}
+
+@keyframes im-panel-section-c-l-bounce {
+    0% {
+        opacity: 0;
+        left: 100%;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes im-panel-section-c-r-bounce {
+    0% {
+        opacity: 0;
+        left: -100%;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}

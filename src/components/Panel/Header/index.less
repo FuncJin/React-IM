@@ -1,0 +1,46 @@
+.im-panel-header {
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    position: relative;
+    user-select: none;
+
+    .im-p-h-avatar {
+        width: 32px;
+        height: 32px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .im-p-h-nickname {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        text-align: center;
+        color: var(--im-color-font-2);
+        user-select: none;
+    }
+
+    .im-p-h-unread-inform {
+        font-size: 20px;
+        cursor: pointer;
+        color: var(--im-color-font-9);
+    }
+}
+
+.im-panel-header-bounce-s {
+    animation: im-opacity-bounce 0.25s linear forwards;
+}
+
+.im-panel-header-bounce-h {
+    animation: im-opacity-bounce 0.25s linear forwards;
+    animation-direction: reverse;
+}

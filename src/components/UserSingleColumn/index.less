@@ -1,0 +1,73 @@
+.im-user-list-single {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+
+    &:hover {
+        background-color: var(--im-color-font-8);
+
+        .im-u-l-s-d-t-nickname {
+            color: var(--im-color-font-10) !important;
+        }
+    }
+
+    .im-u-l-s-avatar {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 1rem;
+    }
+
+    .im-u-l-s-details {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1;
+
+        .im-u-l-s-d-title {
+            display: flex;
+            align-items: center;
+            flex: 1 1;
+
+            .im-u-l-s-d-t-nickname {
+                font-weight: 600;
+                font-size: 14px;
+                flex: 1 1;
+                color: var(--im-color-font-2);
+            }
+
+            .im-u-l-s-d-t-nickname-inc {
+                color: var(--im-color-font-3);
+            }
+
+            .im-u-l-s-d-t-time {
+                font-size: 12px;
+                color: var(--im-color-font-9);
+            }
+        }
+
+        .im-u-l-s-d-info {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex: 1 1;
+
+            .im-u-l-s-d-i-text {
+                width: 0;
+                font-size: 13px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                flex: 1 1;
+                color: var(--im-color-font-3);
+                img {
+                    width: 11px;
+                    height: 11px;
+                    margin-right: 5px;
+                    vertical-align: baseline;
+                }
+            }
+        }
+    }
+}

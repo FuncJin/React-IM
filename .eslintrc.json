@@ -1,0 +1,42 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint/eslint-plugin"],
+    "extends": ["alloy", "alloy/react", "alloy/typescript"],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "rules": {
+        "@typescript-eslint/prefer-optional-chain": "off",
+        "@typescript-eslint/consistent-type-definitions": "off",
+        "@typescript-eslint/consistent-type-imports": "error",
+        "@typescript-eslint/consistent-type-exports": "error",
+        "@typescript-eslint/no-invalid-void-type": "off",
+        "@typescript-eslint/explicit-member-accessibility": "off",
+        "@typescript-eslint/no-invalid-this": "off",
+        "array-bracket-spacing": ["error", "never"],
+        "comma-dangle": ["error", "never"],
+        "max-params": [0, 5],
+        "eqeqeq": "error",
+        "eol-last": "error",
+        "use-isnan": "error",
+        "no-else-return": "error",
+        "no-multiple-empty-lines": "error",
+        "no-throw-literal": "error",
+        "no-unused-vars": "error",
+        "no-console": "error",
+        "no-debugger": "error",
+        "no-alert": "error",
+        "no-return-assign": "off",
+        "no-invalid-this": "off",
+        "complexity": "off",
+        "camelcase": "off",
+        "no-promise-executor-return": "off"
+    }
+}
