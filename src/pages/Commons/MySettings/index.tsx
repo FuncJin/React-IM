@@ -61,7 +61,8 @@ const MySettings = () => {
         () => [
             { text: '主页标签', to: { pathname: '/settings/homePageTagDetails' }, more: true },
             { text: '反馈渠道', to: { pathname: '/settings/feedback' }, border: false, more: true },
-            { text: '版本历史记录', to: { pathname: '/settings/versions' }, more: true }
+            { text: '版本历史记录', to: { pathname: '/settings/versions' }, more: true },
+            { text: '新手引导', to: { pathname: '/settings/noviceGuide' }, more: true }
         ],
         []
     )

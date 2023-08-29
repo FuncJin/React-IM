@@ -41,6 +41,11 @@ export const commons: RouteConfig[] = [
                 lazyElement: <Commons.AppSoftware.HomePageTagDetails />
             },
             {
+                path: '/settings/noviceGuide',
+                isAuth: true,
+                lazyElement: <Commons.AppSoftware.NoviceGuide />
+            },
+            {
                 path: '/settings/retrievePwd',
                 isAuth: true,
                 lazyElement: <Account.RetrievePwd />

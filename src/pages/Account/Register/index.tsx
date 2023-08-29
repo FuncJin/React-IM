@@ -48,7 +48,14 @@ const Register = () => {
                     succeedPass({ id: acc.id, ...res })
                     // 注册成功后跳转至联系人页面
                     navigate('/contacts')
-                    antdMessage.success('注册成功，欢迎您')
+                    message({
+                        title: '注册成功，欢迎您！',
+                        Children: '推荐前往新手引导页以获取更佳体验',
+                        options: [
+                            { text: '算了，我再想想' },
+                            { text: '立即前往', click: () => {}, color: 'red', weight: '700' }
+                        ]
+                    })
                 }
             },
             failed: { isGlobalMessage: 'im' },

@@ -8,7 +8,8 @@ export const Commons = {
     AppSoftware: {
         Feedback: lazy(() => import('@pages/Commons/AppSoftware/Feedback')),
         Versions: lazy(() => import('@pages/Commons/AppSoftware/Versions')),
-        HomePageTagDetails: lazy(() => import('@pages/Commons/AppSoftware/HomePageTagDetails'))
+        HomePageTagDetails: lazy(() => import('@pages/Commons/AppSoftware/HomePageTagDetails')),
+        NoviceGuide: lazy(() => import('@pages/Commons/AppSoftware/NoviceGuide'))
     },
     RankDetails: lazy(() => import('@pages/Commons/RankDetails')),
     Style: {
