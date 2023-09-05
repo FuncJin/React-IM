@@ -25,6 +25,14 @@ const HomePageTagDetails = () => (
                 {
                     text: '为平台做出过贡献',
                     description: <Tag className="im-home-page-tag im-home-page-tag-622B7D">贡献者</Tag>
+                },
+                {
+                    text: 'GitHub',
+                    subTitle: 'Star了本项目（感谢所有支持与帮助）',
+                    description: <Tag className="im-home-page-tag im-home-page-tag-622B7D">满天星斗</Tag>,
+                    click: () => window.open('https://github.com/FuncJin/React-IM'),
+                    cursor: 'pointer',
+                    more: true
                 }
             ]}
         />
