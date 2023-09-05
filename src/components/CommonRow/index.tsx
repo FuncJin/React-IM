@@ -6,6 +6,7 @@ import { RightOutlined, CheckOutlined, LoadingOutlined } from '@ant-design/icons
 import type { FC } from 'react'
 
 import type { CustomKeyByObject } from '@interface/type'
+import type { CssStyle } from '@interface/css'
 import type { CommonRowListType, CommonRowType } from './interface'
 
 import './index.less'
@@ -27,6 +28,7 @@ const isColors = (colors: CommonRowListType['colors']) => {
     if (colors.text) _style['color'] = colors.text
     return _style
 }
+const isCursor = (cursor?: CssStyle['cursor']) => (cursor ? { cursor } : {})
 
 /** 通用行 */
 const Row: FC<Row> = ({ selected, row, len, idx }) => (
@@ -82,7 +84,7 @@ const CommonRow: FC<CommonRowType> = ({ title, comment, list, selected }) => (
                           <div
                               key={idx}
                               className="im-p-s-s-b-single"
-                              style={isColors(row.colors)}
+                              style={{ ...isColors(row.colors), ...isCursor(row.cursor) }}
                               onClick={row.click || (() => {})}
                               title={row.hoverTip}>
                               <Row selected={selected} row={row} len={list.length} idx={idx} />

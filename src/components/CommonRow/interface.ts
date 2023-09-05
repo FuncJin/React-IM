@@ -1,6 +1,7 @@
 import type { ReactNode, MouseEventHandler } from 'react'
 
 import type { CustomKeyByObject } from '@interface/type'
+import type { CssStyle } from '@interface/css'
 
 export type CommonRowListType = {
     /** 是否需要图标 */
@@ -35,6 +36,8 @@ export type CommonRowListType = {
     }
     /** 鼠标移动到该行时所展示的指针提示(同H5 Title) */
     hoverTip?: string
+    /** 鼠标指针状态 */
+    cursor?: CssStyle['cursor']
 }
 
 export type CommonRowType = {
