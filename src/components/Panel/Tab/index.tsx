@@ -37,7 +37,7 @@ const Tab: PanelContent = ({ isContentShow }) => {
     return (
         <ul className={`im-panel-tab ${isContentShow ? 'im-panel-tab-bounce-s' : 'im-panel-tab-bounce-h'}`}>
             <li className="im-p-t-relative">
-                <Link to="/message">
+                <Link to="/message" title="消息">
                     <div className="im-p-t-r-unreadCount">
                         <Badge size="small" count={msgLimit} />
                     </div>
@@ -45,12 +45,12 @@ const Tab: PanelContent = ({ isContentShow }) => {
                 </Link>
             </li>
             <li>
-                <Link to="/contacts">
+                <Link to="/contacts" title="联系人">
                     {pathname === '/contacts' ? <HomeFilled className="im-p-t-highed" /> : <HomeOutlined />}
                 </Link>
             </li>
             <li className="im-p-t-relative">
-                <Link to="/friendsCircle">
+                <Link to="/friendsCircle" title="朋友圈">
                     <div className="im-p-t-r-red-dot">
                         <Badge size="small" dot={isRedDot} />
                     </div>
