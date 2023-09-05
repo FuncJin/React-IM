@@ -10,13 +10,20 @@
     position: relative;
     user-select: none;
 
+    .im-p-h-entrance-transition {
+        display: inline-block;
+        transform-origin: center center;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
     .im-p-h-avatar {
         width: 32px;
         height: 32px;
-
-        &:hover {
-            cursor: pointer;
-        }
+        cursor: pointer;
     }
 
     .im-p-h-nickname {

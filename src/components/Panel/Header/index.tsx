@@ -31,12 +31,15 @@ const Header: PanelContent = ({ isContentShow }) => {
     }, [])
     return (
         <div className={`im-panel-header ${isContentShow ? 'im-panel-header-bounce-s' : 'im-panel-header-bounce-h'}`}>
-            <Link to="/settings" className="im-p-h-avatar">
+            <Link to="/settings" className="im-p-h-avatar im-p-h-entrance-transition" title="与我相关">
                 <img className="im-img-avatar-radius" src={avatar} />
             </Link>
             <p className="im-p-h-nickname">{nickname}</p>
             <Badge size="small" count={count}>
-                <span className="im-p-h-unread-inform" title="未读通知" onClick={() => navigate('/inform/homeUnread')}>
+                <span
+                    className="im-p-h-unread-inform im-p-h-entrance-transition"
+                    title="未读通知"
+                    onClick={() => navigate('/inform/homeUnread')}>
                     <BellFilled />
                 </span>
             </Badge>
