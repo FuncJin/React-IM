@@ -5,6 +5,7 @@ import { message as antdMessage } from 'antd'
 import { storage } from '@utils/storage'
 import { domMethods } from '@utils/dom'
 import { appTheme } from '@utils/theme'
+import { timeUtils } from '@utils/time'
 import { getCurDeviceType } from '@utils/device/curDeviceType'
 import { constant } from '@constant'
 
@@ -19,7 +20,10 @@ const indexConfetti = () => {
     setTimeout(async () => {
         const confetti = storage.get('react_im_index_confetti')
         if (!confetti) return canvas.remove()
-        antdMessage.success({ content: `${storage.get('react_im_user_nickname')}，欢迎回访`, duration: 2 })
+        // 提示语
+        const { num, t } = timeUtils.getTimeBoundary(Number(new Date()))
+        const tipContent = num === 1 ? `${t}了，早点休息` : `${t}好`
+        antdMessage.success({ content: `${storage.get('react_im_user_nickname')}，${tipContent}`, duration: 2 })
         // 由于pc端、移动端下表情大小有问题，所以如果是移动端访问，则将表情的尺寸变大一些
         const _deviceType = getCurDeviceType()
         const emojiSize = _deviceType === 'pc' ? 20 : 80

@@ -109,5 +109,38 @@ const getTime = (preTimestamp: number) => {
         tiny: week
     }
 }
+/**
+ * 返回指定日期中，当前小时所对应的时间分界
+ */
+const getTimeBoundary = (time: number) => {
+    const section = [
+        // -1代表很早，0代表正好，1代表很晚
+        [0, 4, '凌晨', 1],
+        [5, 8, '早上', -1],
+        [9, 11, '上午', 0],
+        [11, 13, '中午', 0],
+        [14, 18, '下午', 0],
+        [19, 21, '晚上', 0],
+        [22, 24, '深夜', 1]
+    ] as const
+    const hours = new Date(time).getHours()
+    const boundary = { num: 0, t: '' }
+    for (let i = 0, len = section.length; i < len; i++) {
+        if (hours >= section[i][0] && hours <= section[i][1]) {
+            boundary.num = section[i][3]
+            boundary.t = section[i][2]
+            break
+        }
+    }
+    return boundary
+}
 
-export const tools = { timeDigitFormat, getDate, getWholeDate, getDaysTimeSection, isPreFiveMinsTime, getTime }
+export const tools = {
+    timeDigitFormat,
+    getDate,
+    getWholeDate,
+    getDaysTimeSection,
+    isPreFiveMinsTime,
+    getTime,
+    getTimeBoundary
+}
