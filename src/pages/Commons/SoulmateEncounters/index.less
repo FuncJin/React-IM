@@ -1,0 +1,33 @@
+@import url('@style/commons/template.less');
+
+.im-soulmate-encounters {
+    height: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    overflow-y: scroll;
+    .scrollY();
+
+    a {
+        width: 30%;
+        height: 140px;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        font-weight: 700;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        color: var(--im-color-font-2);
+        background-color: var(--im-color-bg-14);
+
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+    }
+}

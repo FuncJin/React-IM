@@ -148,6 +148,11 @@ export const commons: RouteConfig[] = [
                 path: '/settings/privateMsgInputState',
                 isAuth: true,
                 lazyElement: <User.PrivateMsgInputState />
+            },
+            {
+                path: '/settings/soulmateEncounters',
+                isAuth: true,
+                lazyElement: <Commons.SoulmateEncounters />
             }
         ]
     },

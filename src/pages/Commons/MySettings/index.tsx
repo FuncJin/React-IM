@@ -71,6 +71,11 @@ const MySettings = () => {
         () => [{ text: '平台通知（站内信）', to: { pathname: '/settings/systemInform' }, more: true }],
         []
     )
+    /** 知己相逢 */
+    const soulmateEncounters = useMemo(
+        () => [{ text: '知己相逢', to: { pathname: '/settings/soulmateEncounters' }, more: true }],
+        []
+    )
     /** 与用户账号相关的操作 */
     const accounts = useMemo(
         () => [
@@ -105,9 +110,10 @@ const MySettings = () => {
                 <CommonRow list={themeStyle} />
                 <CommonRow title="修改我的" list={userInfo} />
                 <CommonRow title="朋友圈相关" list={friendsCircle} />
-                <CommonRow list={systemInform} />
                 <CommonRow title="使用中遇到了问题？" list={system} />
                 <CommonRow title="账号相关" list={accounts} />
+                <CommonRow list={systemInform} />
+                <CommonRow list={soulmateEncounters} />
                 <CommonRow list={mail} />
             </Sideslip>
             <Outlet />

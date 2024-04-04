@@ -21,5 +21,6 @@ export const Commons = {
         ColoursText: lazy(() => import('@pages/Commons/Style/ColoursText'))
     },
     MySettings: lazy(() => import('@pages/Commons/MySettings')),
+    SoulmateEncounters: lazy(() => import('@pages/Commons/SoulmateEncounters')),
     NotFound: lazy(() => import('@pages/Commons/NotFound'))
 }
